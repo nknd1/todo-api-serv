@@ -48,11 +48,4 @@ public class TodoItem implements Serializable {
         id, description, complete, createdDate, modifiedDate);
     }
 
-    public void setCreatedDate(Instant now) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
-
-    public void setModifiedDate(Instant now) {
-        throw new UnsupportedOperationException("Not supported yet.");
-    }
 }
