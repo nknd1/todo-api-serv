@@ -19,7 +19,7 @@ public class TodoService {
     }
     
     public TodoItem getTodoById(Long id){
-        return todoItemRepository.findById(id).orElseThrow();
+        return todoItemRepository.findById(id).orElseThrow(null);
     }
     
     public TodoItem createTodo(TodoItem todoItem){
@@ -27,7 +27,7 @@ public class TodoService {
     }
     
     public TodoItem updateTodoItemById(Long id, TodoItem todoItem){
-        TodoItem existingTodoItem = todoItemRepository.findById(id).orElseThrow();
+        TodoItem existingTodoItem = todoItemRepository.findById(id).orElseThrow(null);
         existingTodoItem.setDescription(todoItem.getDescription());
         existingTodoItem.setComplete(todoItem.isComplete());
         return todoItemRepository.save(existingTodoItem);
